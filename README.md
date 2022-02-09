@@ -24,6 +24,9 @@ for a specific version: ``` curl -L https://git.io/getLatestIstio | ISTIO_VERSIO
 
 or ``` curl -L https://istio.io/downloadIstio | sh - ```
 
+``` sudo helm repo add istio.io https://storage.googleapis.com/istio-release/releases/1.4.2/charts/ ```
+
+
 
 
 Install of Istio 
