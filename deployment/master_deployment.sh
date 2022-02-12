@@ -67,6 +67,18 @@ kubectl get nodes
 
 sudo kubeadm token create --print-join-command > /vagrant/token
 echo "Token deployed..."
-sleep 30
+
+# Install Helm3
+
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+sudo apt-get install apt-transport-https --yes
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
+
+# Install Falco
+mkdir security
+wget https://raw.githubusercontent.com/czantoine/Kubernete-infra/main/security/security.sh -P /security
+sudo bash /security/falco.sh
 
 echo "Finished !"
