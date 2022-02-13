@@ -1,4 +1,4 @@
-# Kubernete-infra
+# Kubernetes Infra
 
 ## Prerequisites
 
