@@ -1,0 +1,20 @@
+MASTER: 
+
+sudo apt-get update 
+sudo apt install nfs-kernel-server 
+sudo mkdir -p /mnt/monpartage 
+sudo chown nobody:nogroup /mnt/monpartage 
+sudo chmod 777 /mnt/monpartage 
+sudo echo "/mnt/monpartage 192.168.56.31/24(rw,sync,no_subtree_check)" >> /etc/exports 
+sudo exportfs -a 
+sudo systemctl restart nfs-kernel-server 
+sudo ufw allow from 192.168.56.0/24 to any port nfs 
+sudo ufw --force enable 
+cd /mnt/monpartage 
+sudo touch test 
+
+CLIENT: 
+
+sudo apt-get update -y 
+sudo apt-get install nfs-common 
+sudo mount 192.168.56.30:/mnt/monpartage /var/lib/docker/volumes 
