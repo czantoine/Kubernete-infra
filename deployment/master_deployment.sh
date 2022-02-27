@@ -79,6 +79,6 @@ sudo apt-get install helm
 # Install Falco
 mkdir security
 wget https://raw.githubusercontent.com/czantoine/Kubernete-infra/main/security/security.sh -P /security
-sudo bash /security/falco.sh
+sudo bash /security/security.sh
 
 echo "Finished !"
