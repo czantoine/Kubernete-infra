@@ -1,0 +1,12 @@
+## GitLab Runner Image
+
+
+runners:
+  config: |
+    [[runners]]
+      [runners.kubernetes]
+        image = "ubuntu:16.04"
+        helper_cpu_limit = "200m"
+
+## helpers:
+##    cpuLimit: 200m
