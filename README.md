@@ -73,7 +73,7 @@ sudo kubectl get pods -n falco
 IHM is accesible on the port 2802.
 
 ``` shell
-sudo kubectl port-forward svc/falcosidekick-ui --address 0.0.0.0 2802:2802 --namespace falco
+sudo kubectl port-forward svc/falco-falcosidekick-ui --address 0.0.0.0 2802:2802 --namespace falco
 ```
 
 
