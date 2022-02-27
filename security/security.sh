@@ -5,6 +5,7 @@ sudo helm repo add falcosecurity https://falcosecurity.github.io/charts
 sudo helm install falco falcosecurity/falco \
 --set falcosidekick.enabled=true \
 --set falcosidekick.webui.enabled=true \
+--set auditLog.enabled=true \
 -n falco 
 sudo sleep 15
 sudo kubectl get pods -n falco
