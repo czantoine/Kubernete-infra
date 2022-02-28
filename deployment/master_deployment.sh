@@ -108,7 +108,7 @@ wget https://raw.githubusercontent.com/czantoine/Kubernete-infra/main/security/s
 sudo bash /security/security.sh
 
 # Install Gitlab Runner
-mkdir runner
+mkdir feature/
 wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/feature/feature.yaml -P /feature
 wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/feature/feature.sh -P /feature
 sudo bash /feature/feature.sh
