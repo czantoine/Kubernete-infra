@@ -83,8 +83,8 @@ sudo bash /security/security.sh
 
 # Install Gitlab Runner
 mkdir runner
-wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/feature/feature.yaml -P /runner
-wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/feature/feature.sh -P /runner
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/feature/feature.yaml -P /feature
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/feature/feature.sh -P /feature
 sudo bash /feature/feature.sh
 
 echo "Finished !"
