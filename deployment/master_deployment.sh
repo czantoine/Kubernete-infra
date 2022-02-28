@@ -88,6 +88,9 @@ sudo kubectl create -f /storage/wordpress-mysql-pv.yaml
 wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/storage/mysql-pvc.yaml -P /storage
 sudo kubectl create -f /storage/mysql-pvc.yaml  
 
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/storage/wordpress-pvc.yaml -P /storage
+sudo kubectl create -f /storage/wordpress-pvc.yaml  
+
 # Application
 
 
