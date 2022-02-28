@@ -91,9 +91,10 @@ sudo kubectl create -f /storage/mysql-pvc.yaml
 wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/storage/wordpress-pvc.yaml -P /storage
 sudo kubectl create -f /storage/wordpress-pvc.yaml  
 
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/storage/secret.yaml -P /storage
+sudo kubectl create -f /storage/secret.yaml  
+
 # Application
-
-
 
 # Install Falco
 mkdir security
