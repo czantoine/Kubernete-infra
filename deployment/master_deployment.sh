@@ -102,7 +102,6 @@ sudo kubectl create -f /application/mysql-deploy.yaml
 wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/application/wordpress-deploy.yaml -P /application
 sudo kubectl create -f /application/wordpress-deploy.yaml 
 
-
 # Install Falco
 mkdir security
 wget https://raw.githubusercontent.com/czantoine/Kubernete-infra/main/security/security.sh -P /security
