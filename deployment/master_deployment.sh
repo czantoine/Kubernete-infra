@@ -95,10 +95,13 @@ wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/storage/s
 sudo kubectl create -f /storage/secret.yaml  
 
 # Application
-
 mkdir application
-wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/application/mysql-deploy.yaml -P /storage
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/application/mysql-deploy.yaml -P /application
 sudo kubectl create -f /application/mysql-deploy.yaml 
+
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/application/wordpress-deploy.yaml -P /application
+sudo kubectl create -f /application/wordpress-deploy.yaml 
+
 
 # Install Falco
 mkdir security
