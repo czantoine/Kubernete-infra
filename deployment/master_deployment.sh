@@ -76,6 +76,18 @@ echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt
 sudo apt-get update
 sudo apt-get install helm
 
+# Storage
+
+mkdir storage
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/storage/storage.sh -P /storage
+sudo chmod u+x /storage/storage.sh
+sudo bash /storage/storage.sh
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/storage/wordpress-mysql-pv.yaml -P /storage
+sudo kubectl create -f /storage/wordpress-mysql-pv.yaml
+# Application
+
+
+
 # Install Falco
 mkdir security
 wget https://raw.githubusercontent.com/czantoine/Kubernete-infra/main/security/security.sh -P /security
