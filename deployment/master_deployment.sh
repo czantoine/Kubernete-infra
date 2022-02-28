@@ -96,6 +96,10 @@ sudo kubectl create -f /storage/secret.yaml
 
 # Application
 
+mkdir application
+wget https://raw.githubusercontent.com/czantoine/Kubernetes-infra/main/application/mysql-deploy.yaml -P /storage
+sudo kubectl create -f /application/mysql-deploy.yaml 
+
 # Install Falco
 mkdir security
 wget https://raw.githubusercontent.com/czantoine/Kubernete-infra/main/security/security.sh -P /security
